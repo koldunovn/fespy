@@ -274,7 +274,7 @@ def plot(
     a = interp_kd(data, lon, lat, res=res)
     variable = list(a.data_vars.keys())[0]
     p = a[variable].plot(
-        subplot_kws=dict(projection=working_projection, facecolor="gray"),
+        subplot_kws=dict(projection=working_projection),
         transform=ccrs.PlateCarree(),
         cbar_kwargs={"shrink": 0.9, "pad": 0.01, "orientation": "horizontal"},
         **kwargs
